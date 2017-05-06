@@ -33,15 +33,55 @@ npm i fio-bank-client
 ```
 const fioClient = require('fio-bank-client')
 
-let token = 'AaROqGTyy6pZck...'; // access Token generate in API section of account settings
-let fromDate = '2017-03-01';
-let toDate = '2017-03-31';
-let format = 'json'; // can be CSV, GPC, HTML, JSON, OFX
+let token = 'AaROqGTyy6pZck...' // access Token generate in API section of account settings
+let fromDate = '2017-03-01'
+let toDate = '2017-03-31'
+let dayDate = '2017-04-08'
+let format = 'json' // can be CSV, GPC, HTML, JSON, OFX
 
 fioClient.periodMovements(token,fromDate,toDate,format, function(res) {
-  console.log(res);
+  console.log(res)
 })
+
+fioClient.dailyFilterMovements(token, dayDate, function(res) {
+   console.log(res)
+})
+
+fioClient.periodFilterMovements(token, fromDate, toDate, function(res) {
+  console.log(res)
+})
+
 ```
+
+
+##### Structure
+
+Print first movement in range
+`t.accountStatement.transactionList.transaction[0]`
+
+Movement ID
+`t.accountStatement.transactionList.transaction[0].column22.value` => `13904701394`
+
+Movement Date
+`t.accountStatement.transactionList.transaction[0].column0.value` => `2017-03-01+0100`
+
+Movement Amount
+`t.accountStatement.transactionList.transaction[0].column1.value` => `20`
+
+Movement Currency
+`t.accountStatement.transactionList.transaction[0].column14.value` => `EUR`
+
+Movement Variable Symbol
+`t.accountStatement.transactionList.transaction[0].column5.value` => `12035`
+
+Movement Information for Beneficiary
+`t.accountStatement.transactionList.transaction[3].column16.value` => `string`
+
+Movement Sender
+``t.accountStatement.transactionList.transaction[0].column10.value` => `string`
+
+Movement Sender IBAN
+`t.accountStatement.transactionList.transaction[0].column2.value` => `string`
 
 ## API
 

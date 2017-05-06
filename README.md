@@ -16,9 +16,11 @@
 
 ## Background
 
-[Fio](https://www.fio.sk/) is great bank with great API support, but they miss their official package on npm, so let's try to do one!
+[Fio](https://www.fio.sk/) is great bank with great API support, but they miss official package at NPM, so let's try to do one!
+
 Here is [FIO API DOC 1.6.2](https://www.fio.cz/docs/cz/API_Bankovnictvi.pdf)
-Supported formats are ['csv', 'gpc', 'html', 'json', 'ofx']
+
+Supported formats are csv, gpc, html, json, ofx.
 
 ## Install
 

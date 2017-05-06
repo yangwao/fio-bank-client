@@ -1,0 +1,32 @@
+{
+  "name": "fio-bank-client",
+  "version": "1.0.0",
+  "description": "fio bank api client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangwao/fio-bank-client.git"
+  },
+  "keywords": [
+    "fiobank",
+    "api",
+    "bank",
+    "statement",
+    "transactions"
+  ],
+  "author": "Matej @yangwao Nemcek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yangwao/fio-bank-client/issues"
+  },
+  "homepage": "https://github.com/yangwao/fio-bank-client#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "validator": "^7.0.0"
+  }
+}
